@@ -1,0 +1,269 @@
+/* Abdul Hannan - Weather App - AHCreativeCode */
+:root {
+    --bgmain: #ffffff;
+    --smain: #1e3a8a;
+    --card-bg: #dbeafe;
+    --text-light: #ffffff;
+    --text-dark: #1e3a8a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/winter.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.root {
+    width: 350px;
+    padding: 20px 40px;
+    border: 2px solid var(--card-bg);
+    border-radius: 22px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #dbeafe 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Weather Card */
+.weather-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-light);
+}
+
+.weather-card .date {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.weather-card .temperature {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.weather-card .description {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.location-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.location-input input {
+    padding: 8px 12px;
+    border: 2px solid var(--card-bg);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    color: var(--text-dark);
+    width: 100%;
+    max-width: 200px;
+}
+
+.location-input input::placeholder {
+    color: #aaa;
+}
+
+.location-input button {
+    padding: 10px 12px;
+    background-color: var(--smain);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.location-input button:hover {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+}
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.details div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--card-bg);
+    width: 100%;
+}
+
+.details p {
+    margin: 3px 0;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.details p:first-child {
+    font-size: 16px;
+    color: var(--smain);
+}
+
+/* Hourly Forecast - Move outside and center */
+.hourly-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Individual Forecast Box */
+.hourly-forecast div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+.hourly-forecast i {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    background-color: var(--smain);
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsiveness For Smooth Usage */
+@media (max-width: 768px) {
+    .root {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .weather-card h3 {
+        font-size: 18px;
+    }
+
+    .weather-card .temperature {
+        font-size: 36px;
+    }
+
+    .weather-card .description {
+        font-size: 16px;
+    }
+
+    .hourly-forecast i {
+        font-size: 18px;
+    }
+
+    .hourly-forecast div {
+        font-size: 10px;
+    }
+    .location-input {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .location-input input {
+        font-size: 12px;
+        padding: 6px 10px;
+        max-width: 250px; 
+    }
+
+    .location-input button {
+        font-size: 12px;
+        padding: 6px 10px;
+        max-width: 120px; 
+    }
+
+    .details {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .details div {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .root {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .weather-card h3 {
+        font-size: 16px;
+    }
+
+    .weather-card .temperature {
+        font-size: 30px;
+    }
+
+    .weather-card .description {
+        font-size: 14px;
+    }
+
+    .hourly-forecast i {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .hourly-forecast div {
+        font-size: 10px;
+    }
+    .location-input input {
+        font-size: 10px;
+        padding: 5px 8px;
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .location-input button {
+        font-size: 10px;
+        padding: 5px 8px;
+        width: 100px;
+    }
+
+    .details {
+        font-size: 10px;
+    }
+
+}

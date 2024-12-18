@@ -1,0 +1,55 @@
+<!-- Abdul Hannan - Weather App - AHCreativeCode -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - AHCreativeCode</title>
+    <!-- Boxicons for Weather Icons -->
+    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="root">
+        <div class="weather-card">
+            <div class="location-input">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Enter a city..." 
+                    aria-label="City name">
+                <button id="change-city-btn">Check</button>
+            </div>
+            
+            <h3 class="location"><i class='bx bx-map'></i> <span id="location">Loading...</span></h3>
+            <p class="date" id="date">Loading...</p>
+            <h1 class="temperature" id="temperature">--&deg;C</h1>
+            <p class="description" id="description">--</p>
+    
+            <div class="details">
+                <div>
+                    <p>Wind</p>
+                    <p id="wind">-- km/h</p>
+                </div>
+                <div>
+                    <p>Humidity</p>
+                    <p id="humidity">--%</p>
+                </div>
+                <div>
+                    <p>Pressure</p>
+                    <p id="pressure">-- hPa</p>
+                </div>
+            </div>
+    
+            <!-- Hourly Forecast -->
+            <div class="hourly-forecast" id="hourly">
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
